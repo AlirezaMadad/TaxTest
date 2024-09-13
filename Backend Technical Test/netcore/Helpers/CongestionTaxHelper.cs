@@ -10,7 +10,7 @@ using congestion.calculator.Interfaces;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 namespace congestion.calculator.Helpers
 {
-    public static class CongestionTaxHelper//: ICongestionTaxHelper /* if you want helper not to be static */
+    public class CongestionTaxHelper//: ICongestionTaxHelper /* if you want helper not to be static */
     {
         /*
              * Calculate the total toll fee for one day
@@ -20,7 +20,7 @@ namespace congestion.calculator.Helpers
              * @return - the total congestion tax for that day
         */
 
-        public static Dictionary<DateTime, int> GetTax(DateTime[] dates, Vehicle vehicle)
+        public virtual Dictionary<DateTime, int> GetTax(DateTime[] dates, Vehicle vehicle)
         {
             var totalFee = 0;
             var dayTax = new Dictionary<DateTime,int>();
@@ -91,7 +91,7 @@ namespace congestion.calculator.Helpers
             return dayTax;
         }
 
-        public static int GetTollFee(DateTime date, Vehicle vehicle)
+        public virtual int GetTollFee(DateTime date, Vehicle vehicle)
         {
             var startOfDay = new DateTime(date.Year, date.Month, date.Day, 0, 0, 0);
             if (IsTollFreeDate(date) || IsTollFreeVehicle(vehicle)) return 0;
@@ -117,11 +117,11 @@ namespace congestion.calculator.Helpers
             else return 0;
         }
 
-        private static bool IsTollFreeDate(DateTime date)
+        public bool IsTollFreeDate(DateTime date)
         {
             return date.Year == 2013 && (date.DayOfWeek == DayOfWeek.Saturday || date.DayOfWeek == DayOfWeek.Sunday);
         }
-        private static bool IsTollFreeVehicle(Vehicle vehicle)
+        public bool IsTollFreeVehicle(Vehicle vehicle)
         {
             return vehicle.GetTollFreeVehiclesType() != TollFreeVehicles.NotTollFree;
         }

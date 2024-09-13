@@ -1,5 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using congestion.calculator;
+using Presentation.Models;
 
 Console.WriteLine("Hello, World!");
 Console.WriteLine("I am tax calculator:D");
@@ -21,7 +22,9 @@ tempDates[13] = DateTime.Parse("2013-02-08 18:35:00");
 tempDates[14] = DateTime.Parse("2013-03-26 14:25:00");
 tempDates[15] = DateTime.Parse("2013-03-28 14:07:27");
 var myCar = new Car(congestion.calculator.enums.TollFreeVehicles.NotTollFree,congestion.calculator.enums.VehicleTypes.Car);
-var result = congestion.calculator.Helpers.CongestionTaxHelper.GetTax(tempDates, myCar);
+var _taxTestDbContext = new TaxTestDbContext();
+var _helper = new congestion.calculator.Helpers.CongestionTaxFromDBHelper(_taxTestDbContext);
+var result = _helper.GetTax(tempDates, myCar);
 Console.WriteLine("your total is {0}",result.Values.Sum());
 foreach(var item in result)
 {

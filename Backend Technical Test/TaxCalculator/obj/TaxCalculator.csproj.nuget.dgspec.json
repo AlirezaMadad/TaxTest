@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Alireza\\source\\repos\\Backend Technical Test\\TaxCalculator\\TaxCalculator.csproj": {}
+    "C:\\Users\\Alireza\\source\\repos\\TaxTest\\TaxTest\\Backend Technical Test\\TaxCalculator\\TaxCalculator.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Alireza\\source\\repos\\Backend Technical Test\\netcore\\congestion-tax-calculator-net-core.csproj": {
+    "C:\\Users\\Alireza\\source\\repos\\TaxTest\\TaxTest\\Backend Technical Test\\netcore\\congestion-tax-calculator-net-core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Alireza\\source\\repos\\Backend Technical Test\\netcore\\congestion-tax-calculator-net-core.csproj",
+        "projectUniqueName": "C:\\Users\\Alireza\\source\\repos\\TaxTest\\TaxTest\\Backend Technical Test\\netcore\\congestion-tax-calculator-net-core.csproj",
         "projectName": "congestion-tax-calculator-net-core",
-        "projectPath": "C:\\Users\\Alireza\\source\\repos\\Backend Technical Test\\netcore\\congestion-tax-calculator-net-core.csproj",
+        "projectPath": "C:\\Users\\Alireza\\source\\repos\\TaxTest\\TaxTest\\Backend Technical Test\\netcore\\congestion-tax-calculator-net-core.csproj",
         "packagesPath": "C:\\Users\\Alireza\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Alireza\\source\\repos\\Backend Technical Test\\netcore\\obj\\",
+        "outputPath": "C:\\Users\\Alireza\\source\\repos\\TaxTest\\TaxTest\\Backend Technical Test\\netcore\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
           "C:\\Users\\Alireza\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,12 +26,17 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\Alireza\\source\\repos\\TaxTest\\TaxTest\\Backend Technical Test\\Presentation\\Presentation.csproj": {
+                "projectPath": "C:\\Users\\Alireza\\source\\repos\\TaxTest\\TaxTest\\Backend Technical Test\\Presentation\\Presentation.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -64,17 +73,21 @@
         }
       }
     },
-    "C:\\Users\\Alireza\\source\\repos\\Backend Technical Test\\TaxCalculator\\TaxCalculator.csproj": {
+    "C:\\Users\\Alireza\\source\\repos\\TaxTest\\TaxTest\\Backend Technical Test\\Presentation\\Presentation.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Alireza\\source\\repos\\Backend Technical Test\\TaxCalculator\\TaxCalculator.csproj",
-        "projectName": "TaxCalculator",
-        "projectPath": "C:\\Users\\Alireza\\source\\repos\\Backend Technical Test\\TaxCalculator\\TaxCalculator.csproj",
+        "projectUniqueName": "C:\\Users\\Alireza\\source\\repos\\TaxTest\\TaxTest\\Backend Technical Test\\Presentation\\Presentation.csproj",
+        "projectName": "Presentation",
+        "projectPath": "C:\\Users\\Alireza\\source\\repos\\TaxTest\\TaxTest\\Backend Technical Test\\Presentation\\Presentation.csproj",
         "packagesPath": "C:\\Users\\Alireza\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Alireza\\source\\repos\\Backend Technical Test\\TaxCalculator\\obj\\",
+        "outputPath": "C:\\Users\\Alireza\\source\\repos\\TaxTest\\TaxTest\\Backend Technical Test\\Presentation\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
           "C:\\Users\\Alireza\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -82,14 +95,109 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
+            "Microsoft.AspNetCore.Identity.UI": {
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[8.0.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Alireza\\source\\repos\\TaxTest\\TaxTest\\Backend Technical Test\\TaxCalculator\\TaxCalculator.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Alireza\\source\\repos\\TaxTest\\TaxTest\\Backend Technical Test\\TaxCalculator\\TaxCalculator.csproj",
+        "projectName": "TaxCalculator",
+        "projectPath": "C:\\Users\\Alireza\\source\\repos\\TaxTest\\TaxTest\\Backend Technical Test\\TaxCalculator\\TaxCalculator.csproj",
+        "packagesPath": "C:\\Users\\Alireza\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Alireza\\source\\repos\\TaxTest\\TaxTest\\Backend Technical Test\\TaxCalculator\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Alireza\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Alireza\\source\\repos\\Backend Technical Test\\netcore\\congestion-tax-calculator-net-core.csproj": {
-                "projectPath": "C:\\Users\\Alireza\\source\\repos\\Backend Technical Test\\netcore\\congestion-tax-calculator-net-core.csproj"
+              "C:\\Users\\Alireza\\source\\repos\\TaxTest\\TaxTest\\Backend Technical Test\\netcore\\congestion-tax-calculator-net-core.csproj": {
+                "projectPath": "C:\\Users\\Alireza\\source\\repos\\TaxTest\\TaxTest\\Backend Technical Test\\netcore\\congestion-tax-calculator-net-core.csproj"
               }
             }
           }
